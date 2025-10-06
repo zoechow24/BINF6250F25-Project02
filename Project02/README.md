@@ -69,12 +69,7 @@ FUNCTION build_markov_model(markov_model = dict, text = str, order = int w/ defa
     ELSE
       CREATE new key for the combo of the markov_model and set as 1
 
-  IF the order is 1
-    RETURN markov_model
-  ELSE
-    SET the order to order-1
-    CALL on this function
-    RETURN markov_model
+  RETURN markov_model
 
 INITIATE markov_model dictionary
 text <- string 
