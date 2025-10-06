@@ -173,13 +173,7 @@ def build_markov_model(markov_model, text, order=1):
             markov_model[current_combo][next_text] += 1
         else:
             markov_model[current_combo][next_text] = 1
-        
-    if order == 1:
-        return markov_model
-    else:
-        order = order-1
-        build_markov_model(markov_model, text, order)
-        return markov_model
+    return markov_model
 
 markov_model = dict()
 text = "one fish two fish red fish blue red fish blue"
@@ -296,7 +290,7 @@ with open("/courses/BINF6250.202610/students/fitzgerald.chr/Projects/BINF6250F25
 
     for line in txt_file:
         build_markov_model(markov_model, line, 1)
-        return markov_model
+    return markov_model
 
 print (generate_random_text(markov_model,seed=7))
 ```
