@@ -1,8 +1,9 @@
-# Introduction
+# BINF6250 - Markov Model
+## Introduction
 
 The goal of this project is to build a Markov model from words and implement it to generate new texts. The texts we will use for this project include Dr. Seuss' *One Fish Two Fish* and William Shakespeare's *Sonnet 1*.
 
-# Pseudocode
+## Pseudocode
 
 ### Train Markov model
 
@@ -143,13 +144,13 @@ CALL and print the results from generate_random_text using sonet_markov_model
 ```
 
 
-# Successes
+## Successes
 
 * We were able to build the first order markov_model
 * We used the first order markov_model to test the `generate_next_word` and `generate_random_text` functions, which we were able to successfully program
   * We saved the inner dictionary of the a separate dictionary to calculate and update the values with the probabilities before using the `np.random.choice()` function. 
 
-# Struggles
+## Struggles
 
 * First order `build_markov_model()` function - we struggled with getting all next_words. Our loop initially looped through the text by comparing the targeted word and the word in the text. If the words are the same, the code would find index of the word using `find()` and get the next word. However, this method caused our program to get stuck on the first `fish` found and improperly iterate through the text to find all next words. We later used `enumerate()` to find all indices before looping based on the positions instead. 
 
@@ -160,7 +161,7 @@ CALL and print the results from generate_random_text using sonet_markov_model
 
 
 
-# Personal Reflections
+## Personal Reflections
 
 ## Group Leader (Chris Fitzgerald)
 Our group was able to do the initial markov model fairly easily, but we really hit a wall when we tried the Nth order variant. We probably would have benefited from spending more time on our outline for the code, since it wasn't until we sat down and went line by line vocalizing what it was supposed to be doing vs what it was actually doing that we made any real progress. A better outline would have also enabled us to divide the work better, so perhaps we didnt have to all work at the same time. I know that's not going to be feasible for future projects, so we should break that habit sooner rather than later. I will say that we faced failure with grace as a group. We were able to offer advice and corrections to each other without anyone seeming to take it personally. I've seen groups fall apart under lesser adversity than this, and it was nice that we were able to stay focused and push ahead.
@@ -178,6 +179,6 @@ In contrast, I felt confident implementing the `generate_next_word()` and `gener
 ### Little Butler
 I was nervous about this project and this class at first due to me missing the first assignment and introduction to the course. Since I have not wrote code in Python for a semester or two it was daunting. But with some old lecture notes from 6200 and the help of my group I found this assignment to be very interesting. The Nth order function gave us a run for our money, I worked on it and then ran it but due to the nature of code it didn’t transfer and we had issues with the output. We had edited the function many times from my original code but it worked out in the end.
 
-# Generative AI Appendix
+## Generative AI Appendix
 
 We used Google for syntax clarification, but didn't use any AI generation for anything.
